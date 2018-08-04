@@ -5,11 +5,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../public/assets/css/reset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../public/assets/css/style.css">
     <title>Friend Finder|Survey</title>
 </head>
 
@@ -22,15 +22,16 @@
         <form>
             <h4>About You</h4>
             <div class="form-group">
-                <label for="formGroupExampleInput">Name (Required)</label>
+                <label for="formGroupExampleInput" class="question">Name (Required)</label>
                 <input type="text" class="form-control" id="name" placeholder="">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput2">Link to Photo Image (Required)</label>
+                <label for="formGroupExampleInput2" class="question">Link to Photo Image (Required)</label>
                 <input type="text" class="form-control" id="photo" placeholder="">
             </div>
             <div class="form-group" id="Q1">
                 <h4>Question 1</h4>
+                <span class="question">
                 <p>What plans do you enjoy most with friends?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -41,9 +42,11 @@
                     <option value="5">Doing something wild</option>
                     <option value="5">travelling</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q2">
                 <h4>Question 2</h4>
+                <span class="question">
                 <p>When do you usually call your friends?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -54,9 +57,11 @@
                     <option value="5">When I am upset</option>
                     <option value="6">When I am hungry</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q3">
                 <h4>Question 3</h4>
+                <span class="question">
                 <p>Which word best fits you?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -67,9 +72,11 @@
                     <option value="5">Honest</option>
                     <option value="6">Caring</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q4">
                 <h4>Question 4</h4>
+                <span class="question">
                 <p>How do you usually spend your free time?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -80,9 +87,11 @@
                     <option value="5">Going outdoors</option>
                     <option value="6">I have no free time</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q5">
                 <h4>Question 5</h4>
+                <span class="question">
                 <p>What is your perfect day?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -93,9 +102,11 @@
                     <option value="5">Sleeping</option>
                     <option value="6">Shopping</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q6">
                 <h4>Question 6</h4>
+                <span class="question">
                 <p>How adventurous are you?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -106,9 +117,11 @@
                     <option value="5">Let's do this</option>
                     <option value="6">We can talk about it</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q6">
                 <h4>Question 7</h4>
+                <span class="question">
                 <p>What do you usually reminisce about with friends?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -119,9 +132,11 @@
                     <option value="5">Hilarious inside jokes</option>
                     <option value="5">Our families</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q7">
                 <h4>Question 7</h4>
+                <span class="question">
                 <p>What are you looking for in a friend?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -132,9 +147,11 @@
                     <option value="5">Imaginative</option>
                     <option value="6">Cultured</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q8">
                 <h4>Question 8</h4>
+                <span class="question">
                 <p>What do you do when a friend comes to you upset?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -145,9 +162,11 @@
                     <option value="5">Cook for them</option>
                     <option value="5">Walk away</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q9">
                 <h4>Question 9</h4>
+                <span class="question">
                 <p>What do you and your friends mostly talk about?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -158,9 +177,11 @@
                     <option value="5">The future</option>
                     <option value="6">Philosophy</option>
                 </select>
+            </span>
             </div>
             <div class="form-group" id="Q10">
                 <h4>Question 10</h4>
+                <span class="question">
                 <p>Are you able to keep secrets?</p>
                 <select class="custom-select">
                     <option selected>select an option</option>
@@ -171,10 +192,9 @@
                     <option value="5">Maybe maybe not</option>
                     <option value="6">I fold like a cheap deck of cards</option>
                 </select>
+            </span>
             </div>
-            <button type="submit" class="btn btn-primary mb-2" id="submitButton">
-                <img src="../assets/images/iconmonstr-glasses-21-24 white.png" alt="submit">
-            </button>
+            <a href="/submit"><button class="btn btn-primary"id="submitButton"><span class="fa fa-list-alt"></span><img src="../public/assets/images/iconmonstr-glasses-21-24 white.png" alt="submit"></button></a>
         </form>
     </div>
 

@@ -1,18 +1,30 @@
-// var express = require("express");
-// var bodyParser = require("body-parser");
-// var path = require("path");
-
-// // Sets up the Express App
-// var app = express();
-// var PORT = process.env.PORT || 3000;
-
-// // Sets up the Express app to handle data parsing
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
+// ===============================================================================
+// DEPENDENCIES
+// We need to include the path package to get the correct file path for our html
+// ===============================================================================
+var path = require("path");
 
 
+// ===============================================================================
+// ROUTING
+// ===============================================================================
 
-// // Starts the server to begin listening
-// app.listen(PORT, function() {
-//     console.log("App listening on PORT " + PORT);
+module.exports = function(app) {
+  // HTML GET Requests
+  // Below code handles when users "visit" a page.
+  // ---------------------------------------------------------------------------
+
+//   app.get("/submit", function(req, res) {
+//     res.sendFile(path.join(__dirname, ""));
 //   });
+
+  app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/survey.html"));
+  });
+
+  // If no matching route is found default to home
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
+  });
+};
+
