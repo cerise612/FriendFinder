@@ -34,7 +34,7 @@ require("./app/routing/htmlRoutes")(app);
 app.use(express.static("./app/public"));
 
 // read custom css files
-// app.use("./app/public/assets" , express.static(path.join(__dirname,"assets")));
+// app.use("../app/public/assets" , express.static(path.join(__dirname,"assets")));
 
 // ==============================================================================
 // mySQL CONFIGURATION

@@ -1,69 +1,164 @@
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'root',
-  database : 'friendFinder'
-});
-
-connection.connect();
-
-// query all to display database of existing users
-query = connection.query("SELECT * FROM userData", function(error, res) {
-  if (error) {
-    throw error;
-    console.log(error);
-  } else {
-    results = res;
-    for (var i = 0; i < results.length; i++) {
-      // show results
-      console.log(
-        results[i].id +
-          " | " +
-          results[i].name +
-          " | " +
-          results[i].photo +
-          " | " +
-          results[i].Q1 +
-          " | " +
-          results[i].Q2 +
-          " | " +
-          results[i].Q3 +
-          " | " +
-          results[i].Q4 +
-          " | " +
-          results[i].Q5 +
-          " | " +
-          results[i].Q6 +
-          " | " +
-          results[i].Q7 +
-          " | " +
-          results[i].Q8 +
-          " | " +
-          results[i].Q9 +
-          " | " +
-          results[i].Q10 +
-          " | " +
-          results[i].totalScore);
-    };
-  };
-});
 
 var userData= [
   {
-  "name": "Ahmed",
-  "photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
+  "name": "Holly Kirisame",
+  "photo": "../app/public/assets/images/users/user1",
   "scores": [
+  "1",
   "5",
   "1",
   "4",
-  "4",
-  "5",
-  "1",
+  "3",
   "2",
   "5",
-  "4",
+  "2",
+  "1",
   "1"
-  ]
+  ],
+  totalScore: 25
   },
+  {"name": "Alexis Serpent",
+  "photo": "../app/public/assets/images/users/user2",
+  "scores": [
+  "2",
+  "1",
+  "5",
+  "2",
+  "3",
+  "3",
+  "2",
+  "1",
+  "4",
+  "5"
+  ],
+  totalScore: 28
+  },
+  {"name": "Cassandra Chang",
+  "photo": "../app/public/assets/images/users/user3",
+  "scores": [
+  "3",
+  "2",
+  "1",
+  "5",
+  "2",
+  "4",
+  "4",
+  "5",
+  "3",
+  "2"
+  ],
+  totalScore: 31
+  },
+  {"name": "Maggie Ze",
+  "photo": "../app/public/assets/images/users/user4",
+  "scores": [
+  "4",
+  "3",
+  "2",
+  "1",
+  "5",
+  "2",
+  "3",
+  "3",
+  "5",
+  "4"
+  ],
+  totalScore: 32
+  },
+  {"name": "Erika Warren",
+  "photo": "../app/public/assets/images/users/user5",
+  "scores": [
+  "1",
+  "3",
+  "3",
+  "2",
+  "1",
+  "5",
+  "5",
+  "3",
+  "4",
+  "2"
+  ],
+  totalScore: 29
+  },
+  {"name": "Vanessa Bennett",
+  "photo": "../app/public/assets/images/users/user6",
+  "scores": [
+  "2",
+  "1",
+  "3",
+  "3",
+  "2",
+  "1",
+  "5",
+  "3",
+  "5",
+  "5"
+  ],
+  totalScore: 30
+  },
+  {"name": "Angela Torres",
+  "photo": "../app/public/assets/images/users/user7",
+  "scores": [
+  "1",
+  "5",
+  "2",
+  "2",
+  "3",
+  "2",
+  "1",
+  "5",
+  "2",
+  "1"
+  ],
+  totalScore: 24
+  },
+  {"name": "Alexandra Barnes",
+  "photo": "../app/public/assets/images/users/user8",
+  "scores": [
+  "5",
+  "2",
+  "1",
+  "4",
+  "3",
+  "3",
+  "2",
+  "1",
+  "5",
+  "1"
+  ],
+  totalScore: 27
+  },
+  {"name": "Sara Watkins",
+  "photo": "../app/public/assets/images/users/user9",
+  "scores": [
+  "1",
+  "2",
+  "4",
+  "5",
+  "2",
+  "1",
+  "3",
+  "2",
+  "1",
+  "5"
+  ],
+  totalScore: 26
+  },
+  {"name": "Lyssa Owens",
+  "photo": "../app/public/assets/images/users/user10",
+  "scores": [
+  "1",
+  "1",
+  "1",
+  "1",
+  "1",
+  "2",
+  "1",
+  "3",
+  "2",
+  "1"
+  ],
+  totalScore: 14
+  }
 ]
